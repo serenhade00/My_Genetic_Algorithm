@@ -96,7 +96,7 @@
 
 지역 최적점에 빠지는 문제를 해결하기 위해 새롭게 생성된 염색체에 확률적으로 돌연변이가 발생하도록 한다. 일반적으로 0.1%, 0.05% 등의 아주 낮은 확률로 돌연변이가 발생하도록 설정한다. 
 
-대표적으로 1) reverse 와 2) exchange 연산이 있는데(그림 오류), 여기서는 비트를 반전시키는 1. reverse 방법을 채택했다.
+대표적으로 1) reverse 와 2) exchange 연산이 있는데(그림 오류), 여기서는 단순히 정수값을 새로운 랜덤한 값으로 설정하는 방식을 채택했다.
 
 ## 회귀 분석 및 선정 데이터 분석
 ***
@@ -173,10 +173,10 @@ R^2 = 0.7이라면 "이 모형은 분산의 70%를 설명한다"라고 해석한
 <p align="center"><img src = "https://github.com/serenhade00/My_Genetic_Algorithm/blob/main/img/data.jpg?raw=true" width="100" height ="250" /></p>
 <p align="center">결과 1) 사용 데이터</p>
 
-<img src = "https://github.com/serenhade00/My_Genetic_Algorithm/blob/main/img/regression.jpg?raw=true" width="500" height ="300" />
+<p align="center"><img src = "https://github.com/serenhade00/My_Genetic_Algorithm/blob/main/img/regression.jpg?raw=true" width="500" height ="300" /></p>
 <p align="center">결과 2) 회귀 분석 결과</p>
 
-<img src = "https://github.com/serenhade00/My_Genetic_Algorithm/blob/main/img/result.jpg?raw=true" width="500" height ="300" />
+<p align="center"><img src = "https://github.com/serenhade00/My_Genetic_Algorithm/blob/main/img/result.jpg?raw=true" width="500" height ="300" /></p>
 <p align="center">결과 3) 프로그램 실행 결과</p>
 
 
@@ -208,7 +208,7 @@ R^2 = 0.7이라면 "이 모형은 분산의 70%를 설명한다"라고 해석한
 
 - 이 프로그램은 다소 정적인면이 존재한다. 이미 알고리즘을 실행할 때 어느정도의 범위를 가정하고 시작하기 때문이다. 정말 비교적 분석이 쉬운 **선형 회귀 분석**에서만 통하는 방법일수도 있다.
 
-- 교차 연산에서 임의로 *a*는 뒤의 5자리, *b*는 소수점 전체를 바꾸도록 설정하고, 또한 1-2 / 3-4 끼리만 바꾸도록 설정을 해놨다. 물론 세대를 거칠수록 조금씩이라도 최적해에 다가가겠지만 과연 얼마나 빠르게 진행시켜줄 지 수학적인 의구심이 든다.
+- 교차 연산에서 임의로 *a*는 뒤의 5자리, *b*는 소수점 전체를 바꾸도록 설정하고, 또한 1-2 / 3-4 끼리만 바꾸도록 설정을 해놨다. 물론 세대를 거칠수록 조금씩이라도 최적해에 다가가겠지만 과연 얼마나 빠르게 진행시켜줄지 수학적인 의구심이 든다.
 
 - 또한 해의 개수와 데이터의 개수를 너무 적게 잡은 것 같아 너무 아쉽다. 이미 거의 선형적인 모습이 보일정도로 너무나도 직관적인 데이터이고, 해의 개수가 적다보니 같은 해가 선택되면 그 해끼리 교차 연산을 해봤자 아무 의미가 없어지는 사태가 발생했다. 
 
@@ -220,3 +220,9 @@ R^2 = 0.7이라면 "이 모형은 분산의 70%를 설명한다"라고 해석한
 - 즉, 모든 문제에 적용 가능한 하나의 알고리즘이나 소스 코드가 있는 것이 아니기 때문에 유전 알고리즘의 원리를 이해하고, 이를 본인이 원하는 문제에 적용하는 것이 중요하다.
 
 - 이 알고리즘을 배우면서 느낀점은, **'데이터를 다음 세대에 유전시키는것'** 만 같지 문제마다 구현 방법은 천차만별임을 알 수 있었다. 선택 방법은 뭐로 하는지, 교차를 어떻게 하는지, 적합도를 어떻게 계산하는지 등에 따라 수 많은 경우의 수가 나온다는걸 깨달았다. 
+
+- 이 프로그램이 완벽한 프로그램은 절대 아니지만, 그래도 주요 연산을 직접 구현해보면서 가까운 해를 찾아나가는 방식은 잘 동작하기에 만족스럽다.
+
+<p align="center">Copyrightⓒ. 2022. By Seonghwan Shin. </p>
+<p align="center">All Rights Reserved.</p>
+<p align="center">-The End-</p>
